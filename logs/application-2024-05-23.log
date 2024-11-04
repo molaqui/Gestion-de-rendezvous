@@ -1,0 +1,409 @@
+2024-05-23 21:08:59 - Starting SpringProjectApplication using Java 21.0.2 with PID 11824 (C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project\target\classes started by Abderrahim in C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project)
+2024-05-23 21:08:59 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-23 21:08:59 - No active profile set, falling back to 1 default profile: "default"
+2024-05-23 21:09:00 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23 21:09:01 - Finished Spring Data repository scanning in 101 ms. Found 5 JPA repository interfaces.
+2024-05-23 21:09:01 - Tomcat initialized with port 8085 (http)
+2024-05-23 21:09:01 - Initializing ProtocolHandler ["http-nio-8085"]
+2024-05-23 21:09:01 - Starting service [Tomcat]
+2024-05-23 21:09:01 - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-23 21:09:01 - Initializing Spring embedded WebApplicationContext
+2024-05-23 21:09:01 - Root WebApplicationContext: initialization completed in 2332 ms
+2024-05-23 21:09:01 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23 21:09:02 - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-23 21:09:02 - HHH000026: Second-level cache disabled
+2024-05-23 21:09:02 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23 21:09:02 - HikariPool-1 - Starting...
+2024-05-23 21:09:02 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c544c9
+2024-05-23 21:09:02 - HikariPool-1 - Start completed.
+2024-05-23 21:09:02 - HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-05-23 21:09:04 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23 21:09:04 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23 21:09:04 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-23 21:09:05 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'callController': Unsatisfied dependency expressed through field 'twilioService': Error creating bean with name 'twilioService' defined in file [C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project\target\classes\com\example\springproject\Services\TwilioService.class]: Failed to instantiate [com.example.springproject.Services.TwilioService]: Constructor threw exception
+2024-05-23 21:09:05 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23 21:09:05 - HikariPool-1 - Shutdown initiated...
+2024-05-23 21:09:05 - HikariPool-1 - Shutdown completed.
+2024-05-23 21:09:05 - Stopping service [Tomcat]
+2024-05-23 21:09:05 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-05-23 21:09:05 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'callController': Unsatisfied dependency expressed through field 'twilioService': Error creating bean with name 'twilioService' defined in file [C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project\target\classes\com\example\springproject\Services\TwilioService.class]: Failed to instantiate [com.example.springproject.Services.TwilioService]: Constructor threw exception
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.springproject.SpringProjectApplication.main(SpringProjectApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'twilioService' defined in file [C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project\target\classes\com\example\springproject\Services\TwilioService.class]: Failed to instantiate [com.example.springproject.Services.TwilioService]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1317)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1202)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.example.springproject.Services.TwilioService]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1311)
+	... 31 common frames omitted
+Caused by: com.twilio.exception.AuthenticationException: Username can not be null
+	at com.twilio.Twilio.setUsername(Twilio.java:88)
+	at com.twilio.Twilio.init(Twilio.java:62)
+	at com.example.springproject.Services.TwilioService.<init>(TwilioService.java:23)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:195)
+	... 33 common frames omitted
+2024-05-23 21:15:56 - Starting SpringProjectApplication using Java 21.0.2 with PID 13656 (C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project\target\classes started by Abderrahim in C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project)
+2024-05-23 21:15:56 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-23 21:15:56 - No active profile set, falling back to 1 default profile: "default"
+2024-05-23 21:15:58 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23 21:15:58 - Finished Spring Data repository scanning in 125 ms. Found 5 JPA repository interfaces.
+2024-05-23 21:16:00 - Tomcat initialized with port 8085 (http)
+2024-05-23 21:16:00 - Initializing ProtocolHandler ["http-nio-8085"]
+2024-05-23 21:16:00 - Starting service [Tomcat]
+2024-05-23 21:16:00 - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-23 21:16:00 - Initializing Spring embedded WebApplicationContext
+2024-05-23 21:16:00 - Root WebApplicationContext: initialization completed in 3657 ms
+2024-05-23 21:16:00 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23 21:16:00 - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-23 21:16:00 - HHH000026: Second-level cache disabled
+2024-05-23 21:16:01 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23 21:16:01 - HikariPool-1 - Starting...
+2024-05-23 21:16:02 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f9a5e3f
+2024-05-23 21:16:02 - HikariPool-1 - Start completed.
+2024-05-23 21:16:02 - HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-05-23 21:16:04 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23 21:16:04 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23 21:16:05 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-23 21:16:06 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'callController': Unsatisfied dependency expressed through field 'twilioService': Error creating bean with name 'twilioService' defined in file [C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project\target\classes\com\example\springproject\Services\TwilioService.class]: Failed to instantiate [com.example.springproject.Services.TwilioService]: Constructor threw exception
+2024-05-23 21:16:06 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23 21:16:06 - HikariPool-1 - Shutdown initiated...
+2024-05-23 21:16:06 - HikariPool-1 - Shutdown completed.
+2024-05-23 21:16:06 - Stopping service [Tomcat]
+2024-05-23 21:16:06 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-05-23 21:16:06 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'callController': Unsatisfied dependency expressed through field 'twilioService': Error creating bean with name 'twilioService' defined in file [C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project\target\classes\com\example\springproject\Services\TwilioService.class]: Failed to instantiate [com.example.springproject.Services.TwilioService]: Constructor threw exception
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.springproject.SpringProjectApplication.main(SpringProjectApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'twilioService' defined in file [C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project\target\classes\com\example\springproject\Services\TwilioService.class]: Failed to instantiate [com.example.springproject.Services.TwilioService]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1317)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1202)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.example.springproject.Services.TwilioService]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1311)
+	... 31 common frames omitted
+Caused by: com.twilio.exception.AuthenticationException: Username can not be null
+	at com.twilio.Twilio.setUsername(Twilio.java:88)
+	at com.twilio.Twilio.init(Twilio.java:62)
+	at com.example.springproject.Services.TwilioService.<init>(TwilioService.java:23)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:195)
+	... 33 common frames omitted
+2024-05-23 21:27:20 - Starting SpringProjectApplication using Java 21.0.2 with PID 13540 (C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project\target\classes started by Abderrahim in C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project)
+2024-05-23 21:27:20 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-23 21:27:20 - No active profile set, falling back to 1 default profile: "default"
+2024-05-23 21:27:22 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23 21:27:22 - Finished Spring Data repository scanning in 92 ms. Found 5 JPA repository interfaces.
+2024-05-23 21:27:23 - Tomcat initialized with port 8085 (http)
+2024-05-23 21:27:23 - Initializing ProtocolHandler ["http-nio-8085"]
+2024-05-23 21:27:23 - Starting service [Tomcat]
+2024-05-23 21:27:23 - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-23 21:27:23 - Initializing Spring embedded WebApplicationContext
+2024-05-23 21:27:23 - Root WebApplicationContext: initialization completed in 2322 ms
+2024-05-23 21:27:23 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23 21:27:23 - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-23 21:27:23 - HHH000026: Second-level cache disabled
+2024-05-23 21:27:24 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23 21:27:24 - HikariPool-1 - Starting...
+2024-05-23 21:27:24 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63e70bf9
+2024-05-23 21:27:24 - HikariPool-1 - Start completed.
+2024-05-23 21:27:24 - HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-05-23 21:27:25 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23 21:27:26 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23 21:27:26 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-23 21:27:27 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23 21:27:28 - Starting ProtocolHandler ["http-nio-8085"]
+2024-05-23 21:27:28 - Tomcat started on port 8085 (http) with context path ''
+2024-05-23 21:27:28 - Started SpringProjectApplication in 8.441 seconds (process running for 10.048)
+2024-05-23 21:28:39 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23 21:28:39 - HikariPool-1 - Shutdown initiated...
+2024-05-23 21:28:39 - HikariPool-1 - Shutdown completed.
+2024-05-23 21:28:44 - Starting SpringProjectApplication using Java 21.0.2 with PID 2492 (C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project\target\classes started by Abderrahim in C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project)
+2024-05-23 21:28:44 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-23 21:28:44 - No active profile set, falling back to 1 default profile: "default"
+2024-05-23 21:28:46 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23 21:28:46 - Finished Spring Data repository scanning in 103 ms. Found 5 JPA repository interfaces.
+2024-05-23 21:28:47 - Tomcat initialized with port 8085 (http)
+2024-05-23 21:28:47 - Initializing ProtocolHandler ["http-nio-8085"]
+2024-05-23 21:28:47 - Starting service [Tomcat]
+2024-05-23 21:28:47 - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-23 21:28:47 - Initializing Spring embedded WebApplicationContext
+2024-05-23 21:28:47 - Root WebApplicationContext: initialization completed in 2501 ms
+2024-05-23 21:28:47 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23 21:28:47 - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-23 21:28:47 - HHH000026: Second-level cache disabled
+2024-05-23 21:28:48 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23 21:28:48 - HikariPool-1 - Starting...
+2024-05-23 21:28:48 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@761f234c
+2024-05-23 21:28:48 - HikariPool-1 - Start completed.
+2024-05-23 21:28:48 - HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-05-23 21:28:51 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23 21:28:51 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23 21:28:51 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-23 21:28:53 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23 21:28:54 - Starting ProtocolHandler ["http-nio-8085"]
+2024-05-23 21:28:54 - Tomcat started on port 8085 (http) with context path ''
+2024-05-23 21:28:54 - Started SpringProjectApplication in 11.122 seconds (process running for 12.569)
+2024-05-23 21:29:14 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-23 21:29:14 - Initializing Servlet 'dispatcherServlet'
+2024-05-23 21:29:14 - Completed initialization in 3 ms
+2024-05-23 21:30:34 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23 21:30:34 - HikariPool-1 - Shutdown initiated...
+2024-05-23 21:30:34 - HikariPool-1 - Shutdown completed.
+2024-05-23 21:30:40 - Starting SpringProjectApplication using Java 21.0.2 with PID 136 (C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project\target\classes started by Abderrahim in C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project)
+2024-05-23 21:30:40 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-23 21:30:40 - No active profile set, falling back to 1 default profile: "default"
+2024-05-23 21:30:42 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23 21:30:42 - Finished Spring Data repository scanning in 128 ms. Found 5 JPA repository interfaces.
+2024-05-23 21:30:43 - Tomcat initialized with port 8085 (http)
+2024-05-23 21:30:43 - Initializing ProtocolHandler ["http-nio-8085"]
+2024-05-23 21:30:43 - Starting service [Tomcat]
+2024-05-23 21:30:43 - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-23 21:30:43 - Initializing Spring embedded WebApplicationContext
+2024-05-23 21:30:43 - Root WebApplicationContext: initialization completed in 3022 ms
+2024-05-23 21:30:44 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23 21:30:44 - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-23 21:30:44 - HHH000026: Second-level cache disabled
+2024-05-23 21:30:44 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23 21:30:44 - HikariPool-1 - Starting...
+2024-05-23 21:30:45 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a6e9289
+2024-05-23 21:30:45 - HikariPool-1 - Start completed.
+2024-05-23 21:30:45 - HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-05-23 21:30:47 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23 21:30:48 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23 21:30:48 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-23 21:30:50 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23 21:30:50 - Starting ProtocolHandler ["http-nio-8085"]
+2024-05-23 21:30:50 - Tomcat started on port 8085 (http) with context path ''
+2024-05-23 21:30:50 - Started SpringProjectApplication in 11.358 seconds (process running for 12.765)
+2024-05-23 21:31:14 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-23 21:31:14 - Initializing Servlet 'dispatcherServlet'
+2024-05-23 21:31:14 - Completed initialization in 4 ms
+2024-05-23 21:32:58 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23 21:32:58 - HikariPool-1 - Shutdown initiated...
+2024-05-23 21:32:58 - HikariPool-1 - Shutdown completed.
+2024-05-23 22:45:40 - Starting SpringProjectApplication using Java 21.0.2 with PID 4952 (C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project\target\classes started by Abderrahim in C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project)
+2024-05-23 22:45:40 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-23 22:45:40 - No active profile set, falling back to 1 default profile: "default"
+2024-05-23 22:45:45 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23 22:45:45 - Finished Spring Data repository scanning in 183 ms. Found 5 JPA repository interfaces.
+2024-05-23 22:45:47 - Tomcat initialized with port 8085 (http)
+2024-05-23 22:45:47 - Initializing ProtocolHandler ["http-nio-8085"]
+2024-05-23 22:45:47 - Starting service [Tomcat]
+2024-05-23 22:45:47 - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-23 22:45:48 - Initializing Spring embedded WebApplicationContext
+2024-05-23 22:45:48 - Root WebApplicationContext: initialization completed in 7086 ms
+2024-05-23 22:45:51 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23 22:45:51 - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-23 22:45:51 - HHH000026: Second-level cache disabled
+2024-05-23 22:45:52 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23 22:45:52 - HikariPool-1 - Starting...
+2024-05-23 22:45:53 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e04abc5
+2024-05-23 22:45:53 - HikariPool-1 - Start completed.
+2024-05-23 22:45:53 - HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-05-23 22:45:58 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23 22:46:39 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23 22:46:40 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-23 22:46:41 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23 22:46:43 - Starting ProtocolHandler ["http-nio-8085"]
+2024-05-23 22:46:43 - Tomcat started on port 8085 (http) with context path ''
+2024-05-23 22:46:43 - Started SpringProjectApplication in 69.509 seconds (process running for 72.658)
+2024-05-23 22:56:22 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23 22:56:22 - HikariPool-1 - Shutdown initiated...
+2024-05-23 22:56:22 - HikariPool-1 - Shutdown completed.
+2024-05-23 22:56:30 - Starting SpringProjectApplication using Java 21.0.2 with PID 4764 (C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project\target\classes started by Abderrahim in C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project)
+2024-05-23 22:56:30 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-23 22:56:30 - No active profile set, falling back to 1 default profile: "default"
+2024-05-23 22:56:32 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23 22:56:32 - Finished Spring Data repository scanning in 90 ms. Found 5 JPA repository interfaces.
+2024-05-23 22:56:32 - Tomcat initialized with port 8085 (http)
+2024-05-23 22:56:32 - Initializing ProtocolHandler ["http-nio-8085"]
+2024-05-23 22:56:32 - Starting service [Tomcat]
+2024-05-23 22:56:32 - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-23 22:56:33 - Initializing Spring embedded WebApplicationContext
+2024-05-23 22:56:33 - Root WebApplicationContext: initialization completed in 2455 ms
+2024-05-23 22:56:33 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23 22:56:33 - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-23 22:56:33 - HHH000026: Second-level cache disabled
+2024-05-23 22:56:33 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23 22:56:33 - HikariPool-1 - Starting...
+2024-05-23 22:56:34 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1857fe6c
+2024-05-23 22:56:34 - HikariPool-1 - Start completed.
+2024-05-23 22:56:34 - HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-05-23 22:56:35 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23 22:56:36 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23 22:56:36 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-23 22:56:38 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23 22:56:39 - Starting ProtocolHandler ["http-nio-8085"]
+2024-05-23 22:56:39 - Tomcat started on port 8085 (http) with context path ''
+2024-05-23 22:56:39 - Started SpringProjectApplication in 10.117 seconds (process running for 11.803)
+2024-05-23 22:58:42 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-23 22:58:42 - Initializing Servlet 'dispatcherServlet'
+2024-05-23 22:58:42 - Completed initialization in 2 ms
+2024-05-23 23:01:12 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23 23:01:12 - HikariPool-1 - Shutdown initiated...
+2024-05-23 23:01:12 - HikariPool-1 - Shutdown completed.
+2024-05-23 23:01:20 - Starting SpringProjectApplication using Java 21.0.2 with PID 11104 (C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project\target\classes started by Abderrahim in C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project)
+2024-05-23 23:01:20 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-23 23:01:20 - No active profile set, falling back to 1 default profile: "default"
+2024-05-23 23:01:22 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23 23:01:22 - Finished Spring Data repository scanning in 101 ms. Found 5 JPA repository interfaces.
+2024-05-23 23:01:23 - Tomcat initialized with port 8085 (http)
+2024-05-23 23:01:23 - Initializing ProtocolHandler ["http-nio-8085"]
+2024-05-23 23:01:23 - Starting service [Tomcat]
+2024-05-23 23:01:23 - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-23 23:01:23 - Initializing Spring embedded WebApplicationContext
+2024-05-23 23:01:23 - Root WebApplicationContext: initialization completed in 2685 ms
+2024-05-23 23:01:23 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23 23:01:23 - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-23 23:01:23 - HHH000026: Second-level cache disabled
+2024-05-23 23:01:24 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23 23:01:24 - HikariPool-1 - Starting...
+2024-05-23 23:01:24 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5fe5c68b
+2024-05-23 23:01:24 - HikariPool-1 - Start completed.
+2024-05-23 23:01:25 - HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-05-23 23:01:26 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23 23:01:27 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23 23:01:27 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-23 23:01:29 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23 23:01:30 - Starting ProtocolHandler ["http-nio-8085"]
+2024-05-23 23:01:30 - Tomcat started on port 8085 (http) with context path ''
+2024-05-23 23:01:30 - Started SpringProjectApplication in 11.197 seconds (process running for 12.964)
+2024-05-23 23:01:44 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-23 23:01:44 - Initializing Servlet 'dispatcherServlet'
+2024-05-23 23:01:44 - Completed initialization in 2 ms
+2024-05-23 23:10:58 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23 23:10:58 - HikariPool-1 - Shutdown initiated...
+2024-05-23 23:10:58 - HikariPool-1 - Shutdown completed.
+2024-05-23 23:11:04 - Starting SpringProjectApplication using Java 21.0.2 with PID 1344 (C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project\target\classes started by Abderrahim in C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project)
+2024-05-23 23:11:04 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-23 23:11:04 - No active profile set, falling back to 1 default profile: "default"
+2024-05-23 23:11:05 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23 23:11:06 - Finished Spring Data repository scanning in 83 ms. Found 5 JPA repository interfaces.
+2024-05-23 23:11:06 - Tomcat initialized with port 8085 (http)
+2024-05-23 23:11:06 - Initializing ProtocolHandler ["http-nio-8085"]
+2024-05-23 23:11:06 - Starting service [Tomcat]
+2024-05-23 23:11:06 - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-23 23:11:06 - Initializing Spring embedded WebApplicationContext
+2024-05-23 23:11:06 - Root WebApplicationContext: initialization completed in 2377 ms
+2024-05-23 23:11:07 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23 23:11:07 - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-23 23:11:07 - HHH000026: Second-level cache disabled
+2024-05-23 23:11:07 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23 23:11:07 - HikariPool-1 - Starting...
+2024-05-23 23:11:07 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f76872f
+2024-05-23 23:11:07 - HikariPool-1 - Start completed.
+2024-05-23 23:11:07 - HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-05-23 23:11:09 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23 23:11:09 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23 23:11:10 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-23 23:11:10 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23 23:11:11 - Starting ProtocolHandler ["http-nio-8085"]
+2024-05-23 23:11:11 - Tomcat started on port 8085 (http) with context path ''
+2024-05-23 23:11:11 - Started SpringProjectApplication in 8.32 seconds (process running for 9.796)
+2024-05-23 23:11:24 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-23 23:11:24 - Initializing Servlet 'dispatcherServlet'
+2024-05-23 23:11:24 - Completed initialization in 3 ms
+2024-05-23 23:12:23 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23 23:12:23 - HikariPool-1 - Shutdown initiated...
+2024-05-23 23:12:23 - HikariPool-1 - Shutdown completed.
+2024-05-23 23:12:29 - Starting SpringProjectApplication using Java 21.0.2 with PID 6776 (C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project\target\classes started by Abderrahim in C:\Users\Abderrahim\Desktop\BACK_UP2\REAL-spring-project)
+2024-05-23 23:12:29 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-05-23 23:12:29 - No active profile set, falling back to 1 default profile: "default"
+2024-05-23 23:12:31 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-23 23:12:31 - Finished Spring Data repository scanning in 86 ms. Found 5 JPA repository interfaces.
+2024-05-23 23:12:31 - Tomcat initialized with port 8085 (http)
+2024-05-23 23:12:31 - Initializing ProtocolHandler ["http-nio-8085"]
+2024-05-23 23:12:31 - Starting service [Tomcat]
+2024-05-23 23:12:31 - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-23 23:12:32 - Initializing Spring embedded WebApplicationContext
+2024-05-23 23:12:32 - Root WebApplicationContext: initialization completed in 2375 ms
+2024-05-23 23:12:32 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-23 23:12:32 - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-23 23:12:32 - HHH000026: Second-level cache disabled
+2024-05-23 23:12:32 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-23 23:12:32 - HikariPool-1 - Starting...
+2024-05-23 23:12:33 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f2ca6f8
+2024-05-23 23:12:33 - HikariPool-1 - Start completed.
+2024-05-23 23:12:33 - HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-05-23 23:12:34 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-23 23:12:34 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23 23:12:35 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-23 23:12:36 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-23 23:12:36 - Starting ProtocolHandler ["http-nio-8085"]
+2024-05-23 23:12:37 - Tomcat started on port 8085 (http) with context path ''
+2024-05-23 23:12:37 - Started SpringProjectApplication in 8.83 seconds (process running for 10.411)
+2024-05-23 23:12:37 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-23 23:12:37 - HikariPool-1 - Shutdown initiated...
+2024-05-23 23:12:37 - HikariPool-1 - Shutdown completed.
