@@ -1,0 +1,68 @@
+body {
+  background-color: #f0f2f5;
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+.form-header {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.img-thumbnail {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.img-container {
+  text-align: center;
+}
+
+
+
+.line-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  border-top: 5px solid #edecec; /* Light grey color for the line */
+  margin: 20px 0; /* Space above and below the line */
+}
+
+.line-text {
+  background: #fff; /* Background color to cover the line */
+  padding: 0 10px; /* Padding to give space around the text */
+  font-size: 18px; /* Font size */
+  font-weight: normal; /* Bold text */
+  color: #969595; /* Text color */
+  margin: 0 auto; /* Center the text */
+  position: relative;
+  top: -17px; /* Adjust the position of the text */
+}
+.profile-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}

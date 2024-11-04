@@ -1,0 +1,148 @@
+.table-data {
+  width: 100%;
+}
+
+.order {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.head {
+  margin-bottom: 20px;
+}
+
+.input-group-prepend .input-group-text {
+  background: #f0f0f0;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table thead th {
+  background: #79a0c6;
+  color: #fff;
+}
+
+.table tbody tr:hover {
+  background: #f0f0f0;
+}
+
+.pagination {
+  margin-top: 20px;
+}
+
+.pagination button {
+  min-width: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cards {
+  display: flex;
+
+  gap: 0.4rem; /* Minimal gap between cards */
+  justify-content: space-between; /* Ensures even spacing */
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex: 1 0 auto; /* Allows cards to grow and shrink */
+  min-width: 50px; /* Minimum width for each card */
+  max-width: 230px; /* Maximum width for each card */
+  height: 150px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icon-wrapper {
+  width: 150px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.bg-primary {
+  background-color: #007bff !important;
+}
+
+.bg-danger {
+  background-color: #e7e049 !important;
+}
+
+.bg-success {
+  background-color: #28a745 !important;
+}
+
+.bg-warning {
+  background-color: #f84d37 !important;
+}
+
+.bg-info {
+  background-color: #6d3b93 !important;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+@media (max-width: 1200px) {
+  .card {
+    flex: 1 0 20%; /* Adjust to fit within the viewport */
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    flex: 1 0 25%; /* Adjust to fit within the viewport */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 0 33.33%; /* Adjust to fit within the viewport */
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    flex: 1 0 50%; /* Adjust to fit within the viewport */
+  }
+
+  .icon-wrapper {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}

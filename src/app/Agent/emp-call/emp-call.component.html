@@ -1,0 +1,48 @@
+<header>
+  <h1>Appel Téléphonique</h1>
+</header>
+<div class="dialpad-section">
+  <h2>Composer un numéro</h2>
+  <div class="number-display-container">
+    <div class="number-display">{{ phoneNumber }}</div>
+    <button class="erase-button" (click)="eraseLastDigit()"><i class="fas fa-backspace"></i></button>
+  </div>
+  <div class="dialpad">
+    <div class="dial-row">
+      <button class="dial-button" (click)="appendNumber('1')">1</button>
+      <button class="dial-button" (click)="appendNumber('2')">2</button>
+      <button class="dial-button" (click)="appendNumber('3')">3</button>
+    </div>
+    <div class="dial-row">
+      <button class="dial-button" (click)="appendNumber('4')">4</button>
+      <button class="dial-button" (click)="appendNumber('5')">5</button>
+      <button class="dial-button" (click)="appendNumber('6')">6</button>
+    </div>
+    <div class="dial-row">
+      <button class="dial-button" (click)="appendNumber('7')">7</button>
+      <button class="dial-button" (click)="appendNumber('8')">8</button>
+      <button class="dial-button" (click)="appendNumber('9')">9</button>
+    </div>
+    <div class="dial-row">
+      <button class="dial-button" (click)="appendNumber('*')">*</button>
+      <button class="dial-button" (click)="appendNumber('0')">0</button>
+      <button class="dial-button" (click)="appendNumber('#')">#</button>
+    </div>
+  </div>
+  <div class="call-actions">
+    <button class="call-button call" (click)="call()">Appeler</button>
+    <button class="call-button hangup" (click)="hangup()">Raccrocher</button>
+  </div>
+</div>
+<!-- Notification Popup -->
+<!-- Notification Popup -->
+<div class="popup" [ngClass]="{'show': showPopup}">
+  <div class="popup-content">
+    <button class="close btn btn-danger" (click)="closePopup()">
+      <i class="bi bi-telephone-minus"></i>&times;
+    </button>
+    <p>{{ toastMessage }}</p>
+    <p>{{ toastNumber }}</p>
+    <p id="callDuration">{{ callDuration }}</p>
+  </div>
+</div>

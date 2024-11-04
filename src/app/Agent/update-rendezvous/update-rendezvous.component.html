@@ -1,0 +1,78 @@
+<header>
+  <h1>{{ isUpdate ? 'Mettre à jour le rendez-vous' : 'Ajouter un nouveau rendez-vous' }}</h1>
+</header>
+
+  <div *ngIf="isOk" class="container offset-1 ms-1">
+    <h3 class="alert alert-success"> {{msg}}</h3>
+  </div>
+
+
+<div class="form-section">
+  <form [formGroup]="rdvForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nomDeClient">Nom:</label>
+      <input type="text" id="nomDeClient" formControlName="nomDeClient" required>
+    </div>
+    <div class="form-group">
+      <label for="prenomDeClient">Prénom:</label>
+      <input type="text" id="prenomDeClient" formControlName="prenomDeClient" required>
+    </div>
+    <div class="form-group">
+      <label for="tel">Téléphone:</label>
+      <input type="tel" id="tel" formControlName="tel" required>
+    </div>
+    <div class="form-group">
+      <label for="nomDEntreprise">Nom de l'entreprise:</label>
+      <input type="text" id="nomDEntreprise" formControlName="nomDEntreprise">
+    </div>
+    <div class="form-group">
+      <label for="adresse">Adresse:</label>
+      <input type="text" id="adresse" formControlName="adresse">
+    </div>
+    <div class="form-group">
+      <label for="ville">Ville:</label>
+      <select id="ville" formControlName="ville">
+        <option value="Casablanca">Casablanca</option>
+        <option value="Mohammedia">Mohammedia</option>
+        <option value="Rabat">Rabat</option>
+        <option value="Marrakech">Marrakech</option>
+        <option value="Fès">Fès</option>
+        <option value="Tanger">Tanger</option>
+        <option value="Agadir">Agadir</option>
+        <option value="Oujda">Oujda</option>
+        <option value="Meknès">Meknès</option>
+        <option value="Tetouan">Tétouan</option>
+        <!-- Autres options de villes -->
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="zip">Code postal:</label>
+      <input type="text" id="zip" formControlName="zip">
+    </div>
+    <div class="form-group">
+      <label for="numeroFiscale">Numéro fiscal:</label>
+      <input type="text" id="numeroFiscale" formControlName="numeroFiscale">
+    </div>
+    <div class="form-group">
+      <label for="dateDeRendezVous">Date de RDV:</label>
+      <input type="date" id="dateDeRendezVous" formControlName="dateDeRendezVous" required>
+    </div>
+    <div class="form-group">
+      <label for="type">Type:</label>
+      <select id="type" formControlName="type">
+        <option value="ISO_9000">ISO 9000</option>
+        <option value="ISO_26030">ISO 26030</option>
+        <option value="OHSAS_18001">OHSAS 18001</option>
+        <option value="ISO_14001">ISO 14001</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="commentaire">Commentaire:</label>
+      <textarea id="commentaire" formControlName="commentaire"></textarea>
+    </div>
+    <div class="form-buttons">
+      <button type="submit">{{ isUpdate ? 'Mettre à jour' : 'Ajouter' }}</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="profile">
+    <img [src]="employee?.image ? 'data:image/jpeg;base64,' + employee.image : 'https://via.placeholder.com/100'" alt="Profile Image">
+    <p>{{ employee?.nom }} {{ employee?.prenom }}</p>
+    <p>{{ employee?.email }}</p>
+  </div>
+  <nav>
+    <a routerLink="dashboard"><i class="fas fa-home"></i> Dashboard</a>
+    <a routerLink="ajouter-rendezvous"><i class="fas fa-calendar-plus"></i> Insertion de RDV</a>
+    <a routerLink="update-password"><i class="fas fa-key"></i> Changer de mdp</a>
+    <a routerLink="emp-call"><i class="fas fa-phone"></i> Appel Téléphonique</a>
+    <a routerLink="manque"><i class="fas fa-bell"></i> Rappels</a>
+    <a routerLink="demende-conge"><i class="fas fa-plane"></i> Demande de Congé</a>
+  </nav>
+</div>
+<div class="main-content">
+  <header>
+    <h1>Hello, {{ employee?.nom }}</h1>
+    <p>Today is {{ currentDate }}</p>
+    <button class="logout" id="deconnecter" (click)="logout()">Deconnecter</button>
+  </header>
+  <router-outlet></router-outlet>
+</div>
+
+</body>
+</html>

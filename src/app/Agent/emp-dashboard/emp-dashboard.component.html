@@ -1,0 +1,80 @@
+<!-- emp-dashboard.component.html -->
+<div class="cards">
+  <div class="card blue">
+    <p>Total de Rendez-vous</p>
+    <p class="number">{{ totalRendezvous }}</p>
+  </div>
+  <div class="card yellow">
+    <p>Rendez-vous en cours</p>
+    <p class="number">{{ enCoursRendezvous }}</p>
+  </div>
+  <div class="card green">
+    <p>Rendez-vous confirmés</p>
+    <p class="number">{{ confirmesRendezvous }}</p>
+  </div>
+  <div class="card red">
+    <p>Rendez-vous annulés</p>
+    <p class="number">{{ annulesRendezvous }}</p>
+  </div>
+  <div class="card orange">
+    <p>Rendez-vous Manqués</p>
+    <p class="number">{{ manquesRendezvous }}</p>
+  </div>
+  <div class="card brown">
+    <p>Rendez-vous pas traites</p>
+    <p class="number">{{ pastraiterRendezvous }}</p>
+  </div>
+</div>
+
+<div class="table-section">
+  <h2>Mes RDVs</h2>
+  <label for="searchInput">Rechercher des RDVs:</label>
+  <input type="text" id="searchInput" placeholder="Rechercher des RDVs..." class="form-control mb-3" (input)="filterRendezVous($event)">
+  <div class="table-container">
+    <table id="rdvTable" class="table table-striped">
+      <thead>
+      <tr>
+        <th>RDV</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Tel</th>
+        <th>Nom de l'Entreprise</th>
+        <th>Adresse</th>
+        <th>Ville</th>
+        <th>ZIP</th>
+        <th>Numéro Fiscale</th>
+        <th>Date RDV</th>
+        <th>Type</th>
+        <th>Commentaire</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let rdv of paginatedRendezvousList">
+        <td>{{ rdv.id }}</td>
+        <td>{{ rdv.nomDeClient }}</td>
+        <td>{{ rdv.prenomDeClient }}</td>
+        <td>{{ rdv.tel }}</td>
+        <td>{{ rdv.nomDEntreprise }}</td>
+        <td>{{ rdv.adresse }}</td>
+        <td>{{ rdv.ville }}</td>
+        <td>{{ rdv.zip }}</td>
+        <td>{{ rdv.numeroFiscale }}</td>
+        <td>{{ rdv.dateDeRendezVous | date }}</td>
+        <td>{{ rdv.type }}</td>
+        <td>{{ rdv.commentaire }}</td>
+        <td>{{ rdv.status }}</td>
+        <td>
+          <button class="btn btn-primary btn-sm me-1" (click)="editRendezVous(rdv.id)"><i class="fas fa-edit"></i></button>
+          <button class="btn btn-danger btn-sm" (click)="deleteRendezVous(rdv.id)"><i class="fas fa-trash"></i></button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="pagination">
+    <button class="btn btn-primary me-1" (click)="prevPage()" [disabled]="currentPage === 1"><i class="fas fa-arrow-left"></i> Précédent</button>
+    <button class="btn btn-primary" (click)="nextPage()" [disabled]="currentPage === totalPages"><i class="fas fa-arrow-right"></i> Suivant</button>
+  </div>
+</div>

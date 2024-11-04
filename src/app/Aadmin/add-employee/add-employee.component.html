@@ -1,0 +1,68 @@
+<div class="container mt-5">
+  <div class="form-container">
+    <div class="line-container mb-4">
+      <span class="line-text">Ajout employé</span>
+    </div>
+
+    <form (ngSubmit)="addemployee()">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <div class="form-group mb-3">
+            <label for="fullName">Admin_id</label>
+            <input type="text" class="form-control" id="fullName" value="1" disabled="true" >
+          </div>
+          <div class="form-group mb-3">
+            <label >Matricule</label>
+            <input type="text" class="form-control" id="matricule" [(ngModel)]="matricule" name="matricule" >
+          </div>
+          <div class="form-group mb-3">
+            <label for="nom">Nom</label>
+            <input type="text" class="form-control" id="nom" [(ngModel)]="nom" name="nom">
+          </div>
+          <div class="form-group mb-3">
+            <label for="prenom">Prenom</label>
+            <input type="text" class="form-control" id="prenom" [(ngModel)]="prenom" name="prenom">
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="form-group mb-3">
+            <label for="motDePass">Mot de pass</label>
+            <input type="password"  class="form-control"   id="motDePass" [(ngModel)]="motDePass" name="motDePass">
+          </div>
+          <div class="form-group mb-3">
+            <label >Adresse</label>
+            <input type="text" class="form-control"  id="adresse" [(ngModel)]="adresse" name="adresse">
+          </div>
+          <div class="form-group mb-3">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" type="email" id="email" [(ngModel)]="email" name="email" >
+          </div>
+          <div class="form-group mb-3">
+            <label for="s">Salaire par jour</label>
+            <input type="text" class="form-control" type="email" id="s" [(ngModel)]="salaireParJour" name="salaireParJour" >
+          </div>
+
+        </div>
+        <div class="col-md-4 mb-3 img-container">
+          <label >Photo de Profil</label>
+          <div class="user-profile">
+            <div class="user-avatar mb-3">
+              <img [src]="image ? 'data:image/jpeg;base64,' + image : 'https://via.placeholder.com/150'" alt="Admin Image" class="img-thumbnail">
+            </div>
+
+            <div class="form-group mt-3">
+              <label class="btn btn-outline-primary">
+                Update Image <input type="file" id="image" (change)="onFileChange($event)" hidden>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 offset-md-10">
+          <button type="submit" class="btn btn-primary mt-3">Ajouter</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

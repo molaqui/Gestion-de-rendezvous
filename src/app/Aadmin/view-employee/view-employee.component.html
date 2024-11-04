@@ -1,0 +1,59 @@
+<div class="card mx-auto mt-5" style="max-width: 600px;">
+  <div class="card-body">
+    <h5 class="card-title text-center">Détails de l'employé</h5>
+    <div class="text-center mb-3">
+      <img [src]="employee?.image ? 'data:image/jpeg;base64,' + employee.image : 'https://via.placeholder.com/100'" alt="Profile Image" class="rounded-circle me-2" width="130" height="130">
+    </div>
+    <form >
+      <div class="form-group">
+        <label for="id">ID</label>
+        <input type="text" id="id"  class="form-control" value="{{employee.id}}" disabled>
+      </div>
+      <div class="form-group">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom"  class="form-control" value="{{employee.nom}}" disabled>
+      </div>
+      <div class="form-group">
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom"  class="form-control"  value="{{employee.prenom}}" disabled>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email"  class="form-control" value="{{employee.email}}" disabled>
+      </div>
+
+      <div class="form-group">
+        <label for="matricule">Matricule</label>
+        <input type="text" id="matricule"  class="form-control" value="{{employee.matricule}}" disabled>
+      </div>
+      <div class="form-group">
+        <label for="adress">Adresse</label>
+        <input type="text" id="adress"  class="form-control" value="{{employee.adress}}" disabled>
+      </div>
+      <div class="form-group">
+        <label for="salaireNet">Salaire Net</label>
+        <input type="text" id="salaireNet"  class="form-control" value="{{employee.salaireNet}}" disabled>
+      </div>
+      <div class="form-group">
+        <label for="salaireParJour">Salaire par Jour</label>
+        <input type="text" id="salaireParJour"  class="form-control" value="{{employee.salaireParJour}}" disabled>
+      </div>
+      <div class="form-group">
+        <label for="nmbreDeJour">Nombre de Jours</label>
+        <input type="text" id="nmbreDeJour"  class="form-control" value="{{employee.nmbreDeJour}}" disabled>
+      </div>
+      <div class="form-group">
+        <label for="prime">Prime</label>
+        <input type="text" id="prime"  class="form-control"  value="{{employee.prime}}" disabled>
+      </div>
+      <div class="form-group">
+        <label for="paymentStatus">Statut de Paiement</label>
+        <input type="text" id="paymentStatus"  class="form-control" value="{{employee.paymentStatus}}" disabled>
+      </div>
+    </form>
+  </div>
+</div>
+
+<ng-template #errorTemplate>
+  <p>{{ errorMessage }}</p>
+</ng-template>
